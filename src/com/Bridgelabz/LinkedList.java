@@ -4,13 +4,9 @@ package com.Bridgelabz;
 
 public class LinkedList {
 
-	Node head;   //creating node
+	Node head;
 	Node tail;
 
-	/**
-	 * 
-	 * @param data
-	 */
 	public void add(int data) {
 		/**
 		 * checking whether linked List is empty or not 
@@ -21,6 +17,7 @@ public class LinkedList {
 			head = newNode;
 			tail = newNode;
 		} else {
+			
 			tail.next = newNode;
 			tail = newNode;
 		}
@@ -31,10 +28,22 @@ public class LinkedList {
 		 * displaying the data(s) from node(s)
 		 */
 		Node temp = head;
-		
 		while (temp != null) {
 			System.out.print(temp.data + " -> ");
 			temp = temp.next;
+		}
+	}
+	
+	public void push(int data) {
+		//Creating object of class Node
+		Node newNode = new Node(data);
+		// checking head is null or not
+		if (head == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			newNode.next = head;
+			head = newNode;
 		}
 	}
 	
@@ -49,8 +58,8 @@ public class LinkedList {
 			this.next = null;
 		}
 
-		@Override
-		public String toString() {  //creating tostring method
+		@Override     //creating tostring method
+		public String toString() {  
 			return "Node [data=" + data + ", next=" + next + "]";
 		}
 	}

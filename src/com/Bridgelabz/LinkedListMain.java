@@ -2,17 +2,20 @@ package com.Bridgelabz;
 
 public class LinkedListMain {
 	
-	 
-	
-	
-	public static void main(String[] args) {
-		//creating obkect of linkedlist class
-		
-		
-		LinkedList list = new LinkedList();
-		list.add(56);    //adding element
-		list.add(30);
-		list.add(70);
-		list.display();
-	}
+		/**
+		 * 
+		 * @param args
+		 */
+		public static void main(String[] args) {
+			/**
+			 * creating object of linked list class
+			 * added values through add method
+			 * display values through display method
+			 */
+			LinkedList list = new LinkedList();
+			list.push(70);
+			list.push(30);
+			list.push(56);
+			list.display();
+		}
 }
