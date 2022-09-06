@@ -7,6 +7,7 @@ public class LinkedList {
 	Node head;
 	Node tail;
 
+	
 	public void add(int data) {
 		/**
 		 * checking whether linked List is empty or not 
@@ -55,6 +56,18 @@ public class LinkedList {
 			tail.next = newNode;
 			tail = newNode;
 		}
+	}
+	
+	public void insertInBetween(int data) {
+		Node newNode = new Node(data);
+		if(head == null) {
+			 head = newNode;
+			 tail = newNode;
+		} else {
+			head.next = newNode;
+			newNode.next = tail;
+		}
+		
 	}
 	
 	class Node {
